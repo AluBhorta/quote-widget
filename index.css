@@ -1,5 +1,19 @@
 body {
-  background-color: #222233;
+  background-color: #222233ec;
   color: #fff;
   text-align: center;
+  -webkit-app-region: drag;
+}
+
+.container {
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  /* align-self: center; */
+  /* padding: 8px; */
+}
+
+.app-title {
+  text-decoration: underline;
+  padding-bottom: 0;
 }

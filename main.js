@@ -5,15 +5,15 @@ let mainWindow;
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 500,
-    height: 200,
+    height: 250,
     frame: false,
+    transparent: true,
     webPreferences: {
       nodeIntegration: true
     }
   });
 
   // mainWindow.webContents.openDevTools();
-  // mainWindow.webContents.loadURL(url, { extraHeaders: "pragma: no-cache\n" });
 
   mainWindow.loadFile("index.html");
 
@@ -22,6 +22,4 @@ function createWindow() {
   });
 }
 
-app.on("ready", createWindow);
-
-// app.on("")
+app.on("ready", setTimeout(createWindow, 400));
