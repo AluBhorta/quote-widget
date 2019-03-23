@@ -5,20 +5,20 @@ const api =
 // const quotes = [];
 const quoteElem = document.getElementById("quote");
 const quoterElem = document.getElementById("quoter");
-var counter = 0;
+// let counter = 0;
 
 function updateQuote() {
-  console.log(counter);
+  // console.log(counter);
   axios
     .get(api)
     .then(res => {
       const { title, content } = res.data[0];
       quoteElem.innerHTML = content;
       quoterElem.textContent = title;
-      counter++;
+      // counter++;
     })
     .catch(err => console.log(err));
 }
 
 updateQuote();
-setInterval(updateQuote, 2000);
+setInterval(updateQuote, 5000);
