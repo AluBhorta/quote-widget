@@ -1,0 +1,15 @@
+{
+  "name": "quote-widget",
+  "version": "1.0.0",
+  "description": "a quote widget in electronjs",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "author": "AluBhorta",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "electron": "^4.1.1"
+  }
+}
