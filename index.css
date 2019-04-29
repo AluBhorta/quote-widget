@@ -17,3 +17,35 @@ body {
   text-decoration: underline;
   padding-bottom: 0;
 }
+
+#quote {
+  font-size: 20px;
+  /* letter-spacing: 1px; */
+  line-height: 2rem;
+}
+#quoter {
+  font-size: 2rem;
+  text-transform: uppercase;
+  /* letter-spacing: 1px; */
+  /* line-height: 2rem; */
+}
+
+.btn-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
+}
+
+.btn {
+  background-color: #fff;
+  color: coral;
+  padding: 10px 16px;
+  cursor: pointer;
+  border: 0;
+  border-radius: 10px;
+}
+.btn:hover {
+  background-color: coral;
+  color: #fff;
+  transition: 300 ease-in-out;
+}

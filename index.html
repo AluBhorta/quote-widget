@@ -9,6 +9,22 @@
   <body>
     <div class="container">
       <h3 class="app-title">Quote Widget</h3>
+      <div class="btn-container">
+        <button class="btn" id="prev-btn">Previous</button>
+        <button class="btn" id="play-pause-btn">PAUSE</button>
+        <button class="btn" id="next-btn">Next</button>
+      </div>
+      <form>
+        <input
+          type="text"
+          name="intervalTime"
+          id="intervalTimeInput"
+          placeholder="Interval Time"
+        />
+        <button type="submit" id="intervalSubmitBtn" class="btn">
+          Update Interval
+        </button>
+      </form>
 
       <blockquote id="quote"></blockquote>
       <span>- <strong id="quoter"></strong></span>

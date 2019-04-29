@@ -4,9 +4,10 @@ let mainWindow;
 
 function createWindow() {
   mainWindow = new BrowserWindow({
-    width: 500,
-    height: 250,
-    frame: false,
+    width: 700,
+    height: 450,
+    // frame: false,
+    titleBarStyle: "hidden",
     transparent: true,
     webPreferences: {
       nodeIntegration: true
