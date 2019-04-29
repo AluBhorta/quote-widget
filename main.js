@@ -5,7 +5,7 @@ let mainWindow;
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 700,
-    height: 450,
+    height: 550,
     // frame: false,
     titleBarStyle: "hidden",
     transparent: true,

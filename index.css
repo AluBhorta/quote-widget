@@ -1,6 +1,13 @@
+:root {
+  --red: #df2d2ddc;
+  --blue: #60c1e7ea;
+  --white: #f1f1f1f6;
+  --orange: #ff7f50;
+}
+
 body {
   background-color: #222233ec;
-  color: #fff;
+  color: var(--white);
   text-align: center;
   -webkit-app-region: drag;
 }
@@ -9,8 +16,6 @@ body {
   display: grid;
   justify-items: center;
   align-content: center;
-  /* align-self: center; */
-  /* padding: 8px; */
 }
 
 .app-title {
@@ -26,26 +31,54 @@ body {
 #quoter {
   font-size: 2rem;
   text-transform: uppercase;
-  /* letter-spacing: 1px; */
-  /* line-height: 2rem; */
 }
 
 .btn-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 10px;
+  grid-gap: 40px;
+  padding: 10px 20px;
 }
 
 .btn {
-  background-color: #fff;
-  color: coral;
+  background-color: var(--orange);
+  color: var(--white);
+  border: var(--orange) 1px solid;
   padding: 10px 16px;
   cursor: pointer;
-  border: 0;
-  border-radius: 10px;
+  border-radius: 5px;
 }
 .btn:hover {
-  background-color: coral;
-  color: #fff;
+  background-color: var(--white);
+  color: var(--orange);
+  border: var(--white) 1px solid;
   transition: 300 ease-in-out;
+}
+#play-pause-btn {
+  background-color: var(--blue);
+  border: var(--blue) 1px solid;
+  color: var(--white);
+}
+#play-pause-btn:hover {
+  background-color: var(--white);
+  border: var(--blue) 1px solid;
+  color: var(--blue);
+}
+#intervalSubmitBtn {
+  background-color: var(--red);
+  border: var(--red) 1px solid;
+  color: var(--white);
+}
+#intervalSubmitBtn:hover {
+  background-color: var(--white);
+  border: var(--red) 1px solid;
+  color: var(--red);
+}
+
+.form-container form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 2rem;
+  align-items: center;
+  padding: 15px;
 }

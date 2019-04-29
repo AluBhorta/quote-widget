@@ -3,7 +3,7 @@ const axios = require("axios");
 //
 // variables and elements
 //
-let intervalTime = 4000;
+let intervalTime = 10; //  in seconds
 let interval;
 let play = true;
 const allQuotes = [];
@@ -39,7 +39,15 @@ function handleUpdateQuote() {
 
 function displayCurrentQuote() {
   quoteElem.innerHTML = allQuotes[currentQuoteIndex].quote;
-  quoterElem.textContent = allQuotes[currentQuoteIndex].quoter;
+  quoterElem.textContent = "- " + allQuotes[currentQuoteIndex].quoter;
+}
+
+function setIntervalNow() {
+  interval = setInterval(() => {
+    if (play) {
+      handleUpdateQuote();
+    }
+  }, intervalTime * 1000);
 }
 
 //
@@ -71,13 +79,8 @@ intervalSubmitBtn.addEventListener("click", e => {
     typeof parseInt(intervalTimeInput.value) === "number"
   ) {
     intervalTime = intervalTimeInput.value;
-    intervalTimeInput.value = "";
     clearInterval(interval);
-    interval = setInterval(() => {
-      if (play) {
-        handleUpdateQuote();
-      }
-    }, intervalTime);
+    setIntervalNow();
   }
 });
 
@@ -90,8 +93,4 @@ handleUpdateQuote();
 intervalTimeInput.value = intervalTime;
 
 // setting intervals
-interval = setInterval(() => {
-  if (play) {
-    handleUpdateQuote();
-  }
-}, intervalTime);
+setIntervalNow();
