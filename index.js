@@ -73,7 +73,7 @@ nextQuoteBtn.addEventListener("click", () => {
 });
 
 intervalSubmitBtn.addEventListener("click", e => {
-  e.preventDefault();
+  // e.preventDefault();
   if (
     intervalTimeInput.value !== "" &&
     typeof parseInt(intervalTimeInput.value) === "number"

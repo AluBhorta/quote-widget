@@ -10,6 +10,7 @@ body {
   color: var(--white);
   text-align: center;
   -webkit-app-region: drag;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 
 .container {

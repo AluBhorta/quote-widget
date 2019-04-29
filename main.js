@@ -7,17 +7,16 @@ function createWindow() {
     width: 700,
     height: 550,
     // frame: false,
-    titleBarStyle: "hidden",
+
     transparent: true,
     webPreferences: {
       nodeIntegration: true
     }
   });
-
   // mainWindow.webContents.openDevTools();
 
+  mainWindow.setMenuBarVisibility(false);
   mainWindow.loadFile("index.html");
-
   mainWindow.on("closed", function() {
     mainWindow = null;
   });
